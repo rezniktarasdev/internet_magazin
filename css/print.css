@@ -1,0 +1,147 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Kaushan Script', cursive;
+}
+
+body, ul, li, h1, h2 {
+	margin: 0;
+	padding: 0;
+}
+
+ul, li {
+	list-style: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.3);
+	overflow: hidden;
+	text-align: center;
+	padding: 0 100px;
+}
+
+.haeder_title {
+	font-size: 70px;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.haeder_subtitle {
+	font-size: 45px;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.header_video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 120%;
+	z-index: -1;
+}
+
+.products {
+	width: 980px;
+	margin: 0 auto;
+	padding: 50px 0 150px;
+}
+
+.products_title {
+	font-size: 40px;
+	text-align: center;
+}
+
+.product_list {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.product_item {
+	width: 30%;
+}
+
+.product_primary {
+	width: 100%;
+}
+
+.product_secondary {
+	padding-left: 50px;
+	display: none;
+}
+
+.product_details {
+	overflow: hidden;
+	padding: 20px;
+	background-color: white;
+	display: flex;
+	border: 1px solid gray;
+	box-shadow: 0 0 5px gray;
+}
+
+.product_title {
+	font-size: 26px;
+}
+
+.product_price {
+	display: flex;
+	font-size: 30px;
+}
+
+.product_price_old {
+	text-decoration: line-through;
+	margin-left: 20px;
+}
+
+.product_image_wrapper {
+	height: 400px;
+	text-align: center;
+}
+
+.product_image {
+	max-height: 400px;
+}
+
+.product_close {
+	display: none;
+}
+
+#product_1:checked ~ .product_list .product_1 .product_details,
+#product_2:checked ~ .product_list .product_2 .product_details,
+#product_3:checked ~ .product_list .product_3 .product_details {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+#product_1:checked ~ .product_list .product_1 .product_primary,
+#product_2:checked ~ .product_list .product_2 .product_primary,
+#product_3:checked ~ .product_list .product_3 .product_primary {
+	width: 30%;
+}
+
+#product_1:checked ~ .product_list .product_1 .product_secondary,
+#product_2:checked ~ .product_list .product_2 .product_secondary,
+#product_3:checked ~ .product_list .product_3 .product_secondary {
+	display: block;
+}
+
+
+
+
+
